@@ -1,0 +1,81 @@
+OS : Ubuntu Linux 18.04 LST
+
+1. Check the python version
+  $python --version     default as python 2.x.x
+  $python3 --version    It is default too because of distinguishing from upper python
+  Both of them are already installed in 18.04 LST
+
+2. Install pip
+  $sudo apt install python3-pip -y
+  Pip, as a Python Package Index, is a package management system for python. It is almost same as npm or yarn in node.js
+  
+  $which pip3
+  $ln -s /usr/bin/pip3 /usr/bin/pip
+  If it doesn't work, use sudo
+  
+3. Install Django
+  $pip install Django
+  or If you want a certain version
+  $pip install Django=='version'
+  then check Django version.
+  $django-admin --version
+  or
+  $django-admin-py --version
+  or
+  $python3
+  >>import django
+  >>print(django.get_version())
+  
+4. Install Virtualenv
+  Virtualenv is a python environment builder. It is create isolated python environments.
+  We can choose the version of python that will be installed in the virtualenv environment. This is very useful for developers.
+  They can run and develop an application with defferent python versions and defferent environments on one OS.
+  Let's install virtualenv
+  
+  $pip install vertualenv
+  
+  then we can use the vertualenv command to create a new environment with python3  as default python version.
+  So let's create a new environment "virtualEnvName" with python3 as the python version and pip3 for the django installation
+  
+  $virtualenv --python=python3 virtualEnvName
+  
+5. Activate Virtualenv
+  $cd virtualEnvName
+  $source bin/activate
+  
+  then install Django in the virtual environment that we've created
+  
+  $pip install django=="version"
+  
+  next, check django version
+  
+  $django-admin --version
+  
+6. Create first project with django
+  $django-admin startproject projectname
+  
+  The command will create a new directory 'projectname' that contains Django files. Let's check by typing followed command
+  
+  $cd projectname
+  $tree
+  
+7. Run the server
+  Edit settings.py file under the 'projectname' directory to launch server
+  $vim projectname/settings.py
+  
+  then Type the server IP address inside the 'ALLOWED_HOSTS' line as followed
+  ALLOWED_HOSTS = ['127.0.0.1']
+  then save it
+  
+  Now run the python django runserver command.
+  
+  $python manage.py runserver
+  this command makes your project' port be 8000 as a default
+  or
+  $python manage.py runserver 'port'
+  If you want certain port, type behind command
+  
+  Open your web browser and type the server IP address that you typed after ALLOWED_HOSTS
+  
+  127.0.0.1:8000
+  
