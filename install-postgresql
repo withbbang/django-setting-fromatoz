@@ -1,0 +1,9 @@
+reference from https://tutorial-extensions.djangogirls.org/ko/optional_postgresql_installation/
+
+In ubuntu Linux
+  $sudo apt-get install postgresql postgresql-contrib
+  
+In others 
+  visite postsql site
+  
+  
