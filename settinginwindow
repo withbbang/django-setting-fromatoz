@@ -1,6 +1,7 @@
 install python
 install pip
 install virtualenv
+install mysqlclient (depanding on db engine)
 
 check each version
 
