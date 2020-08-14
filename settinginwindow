@@ -1,1 +1,14 @@
+install python
+install pip
+install virtualenv
 
+check each version
+
+> cd [directory name]
+> python -m venv [envname]
+> cd [envname]/Scripts
+> activate
+(envname) > cd ../..
+(envname) > django-admin startproject [projectname]
+(envname) > cd projectname
+(envname) > python manage.py startapp [appname]
