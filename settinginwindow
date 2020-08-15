@@ -1,7 +1,6 @@
 install python
 install pip
 install virtualenv
-install mysqlclient (depanding on db engine)
 
 check each version
 
@@ -13,3 +12,7 @@ check each version
 (envname) > django-admin startproject [projectname]
 (envname) > cd projectname
 (envname) > python manage.py startapp [appname]
+(envname) > pip install mysqlclient (depanding on db engine)
+(envname) > pip install django
+(envname) > pip install djangorestframework
+(envname) > pip install django-cors-headers
